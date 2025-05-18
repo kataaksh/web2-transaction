@@ -6,10 +6,6 @@ const { JWT_SECRET } = require('../config')
 
 const userRouter = express.Router();
 
-// userRouter.get('/', (req, res) => {
-//     res.send('Get all users');
-// });
-
 const signupBody = zod.object({
     username: zod.string().email();
     firstName: zod.string(),
